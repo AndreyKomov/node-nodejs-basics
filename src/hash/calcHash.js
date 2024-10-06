@@ -1,6 +1,5 @@
 import {createHash} from 'crypto';
 import * as fs  from 'fs';
-import { stdout } from 'node:process';
 
 const calculateHash = async () => {
     const hash = createHash('sha256');
@@ -8,7 +7,7 @@ const calculateHash = async () => {
 
     
 
-    stream.pipe(hash).setEncoding('hex').pipe(stdout);
+    stream.pipe(hash).setEncoding('hex').pipe(process.stdout);
 };
 
 await calculateHash();
