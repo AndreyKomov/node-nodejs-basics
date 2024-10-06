@@ -1,5 +1,5 @@
 import { stdin, stdout } from 'node:process';
-import { Transform } from 'node:stream';
+import { compose, Transform } from 'node:stream'
 
 const transform = async () => {
     const transform = new Transform({
