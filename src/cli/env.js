@@ -1,3 +1,5 @@
+import { env } from 'node:process';
+
 const parseEnv = () => {
     const currentEnv = process.env;
     const filteredKeysVariables = Object.keys(currentEnv).filter(item => item.startsWith('RSS_'));

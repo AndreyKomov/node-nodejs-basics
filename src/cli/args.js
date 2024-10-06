@@ -1,5 +1,10 @@
+import { argv } from 'node:process';
+
 const parseArgs = () => {
-    // Write your code here 
+    const args = process.argv;
+
+    console.log(args.map((item, index) => index%2 ? `is ${item},` : item.slice(2)).join(' '));
+    
 };
 
 parseArgs();
